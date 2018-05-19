@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <style>
+    html {
+      height: 100%;
+    }
+    body {
+      background-size: cover;
+      background-image: url(images/airpods.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  </style>
+</head>
+<body role="document">
+  <script type="module">
+    import HomoSapiens from './js/HomoSapiens.js';
+
+    const stallion = new class extends HomoSapiens {
+      constructor() {
+        super('Serhii Bielievschuk', 'May 21, 1991', 'male');
+      }
+
+      async doBackEnd() {
+        // @todo Improve backend skills to avoid errors.
+        await this.doWork('doing backend', new Error('the deploy failed'));
+      }
+
+      async doFrontEnd() {
+        await this.doWork('doing frontend');
+      }
+
+      async visitEnglishClasses() {
+        await this.walkUpright('on the way to English classes');
+        this.is('learning English');
+      }
+    };
+
+    const sirko = new HomoSapiens('Roman Liashenko', 'June 20, 1986', 'male');
+    const BR0kEN = new HomoSapiens('Sergii Bondarenko', 'September 6, 1991', 'male');
+    const axicdv = new HomoSapiens('Dmytro Palamarchuk', 'TODO', 'male');
+    const lokeoke = new HomoSapiens('Mykhailo Sokolovskyi', 'TODO', 'male');
+    const Iliya889 = new HomoSapiens('Iliya Kulishova', 'TODO', 'female');
+    const soovorov = new HomoSapiens('Alexander Mikhutkin', 'TODO', 'male');
+    const jplotnikov = new HomoSapiens('Yevhen Plotnikov', 'TODO', 'male');
+
+    document.title = stallion.fullName;
+
+    (async today => {
+      await stallion.wakeUp();
+      await stallion.goToWork();
+
+      if (stallion.isBirthday(today)) {
+        stallion.celebrateBirthday(
+          [lokeoke, axicdv, BR0kEN, jplotnikov, sirko, Iliya889],
+          ['the best wishes', 'Apple Airpods', 'щястя-здаровя']
+        );
+      }
+
+      try {
+        await stallion.doFrontEnd();
+      }
+      catch (frontendIssue) {
+        await stallion.requestHelp(frontendIssue, soovorov, sirko);
+        await stallion.doFrontEnd();
+      }
+
+      try {
+        await stallion.doBackEnd();
+      }
+      catch (backendIssue) {
+        await stallion.requestHelp(backendIssue, lokeoke, BR0kEN);
+        await stallion.doBackEnd();
+      }
+
+      await stallion.getFood();
+
+      if (['Monday', 'Wednesday'].includes(today.toLocaleDateString('en-us', {weekday: 'long'}))) {
+        await stallion.visitEnglishClasses();
+      }
+
+      await stallion.goHome();
+      await stallion.goSleep();
+    })(new Date('May 21, 2018'));
+  </script>
+</body>
+</html>
