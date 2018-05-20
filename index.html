@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en-US">
+<head itemprop="character" itemscope itemtype="http://schema.org/Person">
   <meta charset="utf-8" />
+  <meta itemprop="gender" content="male" />
+  <meta itemprop="birthDate" content="May 21, 1991" />
+  <title itemprop="name">Serhii Bielievschuk</title>
   <style>
     html {
       height: 100%;
@@ -20,7 +23,11 @@
 
     const stallion = new class extends HomoSapiens {
       constructor() {
-        super('Serhii Bielievschuk', 'May 21, 1991', 'male');
+        super(
+          document.title,
+          document.head.querySelector('meta[itemprop=birthDate]').content,
+          document.head.querySelector('meta[itemprop=gender]').content
+        );
       }
 
       async doBackEnd() {
@@ -45,8 +52,6 @@
     const Iliya889 = new HomoSapiens('Iliya Kulishova', 'April 28, 1988', 'female');
     const soovorov = new HomoSapiens('Alexander Mikhutkin', 'February 11, 1987', 'male');
     const jplotnikov = new HomoSapiens('Yevhen Plotnikov', 'February 9, 1985', 'male');
-
-    document.title = stallion.fullName;
 
     (async today => {
       await stallion.wakeUp();
@@ -77,7 +82,7 @@
 
       await stallion.getFood();
 
-      if (['Monday', 'Wednesday'].includes(today.toLocaleDateString('en-us', {weekday: 'long'}))) {
+      if (['Monday', 'Wednesday'].includes(today.toLocaleDateString(document.documentElement.lang, {weekday: 'long'}))) {
         await stallion.visitEnglishClasses();
       }
 
