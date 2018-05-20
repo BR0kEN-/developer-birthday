@@ -1,7 +1,6 @@
 import HomoErectus from './HomoErectus.js';
 
 export default class HomoSapiens extends HomoErectus {
-
   /**
    * @inheritDoc
    */
@@ -63,5 +62,4 @@ export default class HomoSapiens extends HomoErectus {
 
     this.is('requesting help of %s because %s', people, issue.message);
   }
-
 }

@@ -1,5 +1,4 @@
 export default class HomoHabilis {
-
   /**
    * @param {String} fullName
    *   The full name of a person.
@@ -74,5 +73,4 @@ export default class HomoHabilis {
     /* eslint-disable-next-line no-console */
     console.log(`${this} is ${message}...`);
   }
-
 }
