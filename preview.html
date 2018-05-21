@@ -1,0 +1,120 @@
+<html>
+<head>
+<title>Serhii Bielievschuk</title>
+<meta charset="UTF-8">
+<style type="text/css">
+body { font-size: 1.4em; }
+.ln { color: #888888; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(232,191,106); }
+.s1 { color: rgb(186,186,186); }
+.s2 { color: rgb(169,183,198); }
+.s3 { color: rgb(165,194,97); }
+.s4 { color: rgb(255,198,109); }
+.s5 { color: rgb(152,118,170); }
+.s6 { color: rgb(104,151,187); }
+.s7 { color: rgb(40,123,222); }
+.s8 { color: rgb(204,120,50); }
+.s9 { color: rgb(106,135,89); }
+.s10 { color: rgb(128,128,128); }
+.s11 { color: #a8c023; }
+</style>
+</head>
+<BODY BGCOLOR="#2b2b2b">
+<pre>
+<span class="s0">&lt;!DOCTYPE </span><span class="s1">html</span><span class="s0">&gt;</span><span class="s2">
+</span><span class="s0">&lt;html </span><span class="s1">lang=</span><span class="s3">&quot;en-US&quot;</span><span class="s0">&gt;</span><span class="s2">
+</span><span class="s0">&lt;head </span><span class="s1">itemprop=</span><span class="s3">&quot;character&quot; </span><span class="s1">itemscope itemtype=</span><span class="s3">&quot;http://schema.org/Person&quot;</span><span class="s0">&gt;</span><span class="s2">
+  </span><span class="s0">&lt;meta </span><span class="s1">charset=</span><span class="s3">&quot;utf-8&quot; </span><span class="s0">/&gt;</span><span class="s2">
+  </span><span class="s0">&lt;meta </span><span class="s1">itemprop=</span><span class="s3">&quot;gender&quot; </span><span class="s1">content=</span><span class="s3">&quot;male&quot; </span><span class="s0">/&gt;</span><span class="s2">
+  </span><span class="s0">&lt;meta </span><span class="s1">itemprop=</span><span class="s3">&quot;birthDate&quot; </span><span class="s1">content=</span><span class="s3">&quot;May 21, 1991&quot; </span><span class="s0">/&gt;</span><span class="s2">
+  </span><span class="s0">&lt;title </span><span class="s1">itemprop=</span><span class="s3">&quot;name&quot;</span><span class="s0">&gt;</span><span class="s2">Serhii Bielievschuk</span><span class="s0">&lt;/title&gt;</span><span class="s2">
+  </span><span class="s0">&lt;style&gt;</span><span class="s2">
+    </span><span class="s8">html </span><span class="s2">{
+      </span><span class="s5">height</span><span class="s2">: </span><span class="s6">100</span><span class="s2">%;
+    }
+    </span><span class="s8">body </span><span class="s2">{
+      </span><span class="s5">background-size</span><span class="s2">: cover;
+      </span><span class="s5">background-image</span><span class="s2">: </span><span class="s4">url</span><span class="s2">(</span><span class="s7">images/airpods.jpg</span><span class="s2">);
+      </span><span class="s5">background-repeat</span><span class="s2">: no-repeat;
+      </span><span class="s5">background-position</span><span class="s2">: center;
+    }
+  </span><span class="s0">&lt;/style&gt;</span><span class="s2">
+</span><span class="s0">&lt;/head&gt;</span><span class="s2">
+</span><span class="s0">&lt;body </span><span class="s1">role=</span><span class="s3">&quot;document&quot;</span><span class="s0">&gt;</span><span class="s2">
+  </span><span class="s0">&lt;script </span><span class="s1">type=</span><span class="s3">&quot;module&quot;</span><span class="s0">&gt;</span><span class="s2">
+    </span><span class="s8">import </span><span class="s2">HomoSapiens </span><span class="s8">from </span><span class="s9">'./js/HomoSapiens.js'</span><span class="s2">;
+
+    </span><span class="s8">const </span><span class="s2">stallion = </span><span class="s8">new class extends </span><span class="s2">HomoSapiens {</span>
+      <span class="s8">constructor</span><span class="s2">() {
+        <span class="s8">super</span><span class="s2">(
+          document.title,
+          document.head.</span><span class="s5">querySelector</span><span class="s2">(</span><span class="s9">'meta[itemprop=birthDate]'</span><span class="s2">).</span><span class="s5">content</span><span class="s2">,
+          document.head.</span><span class="s5">querySelector</span><span class="s2">(</span><span class="s9">'meta[itemprop=gender]'</span><span class="s2">).</span><span class="s5">content</span><span class="s2">
+        );
+      }
+
+      </span><span class="s8">async</span><span class="s5"> doBackEnd</span><span class="s2">() {</span>
+        <span class="ln">// @</span><span class="s11">todo Improve backend skills to avoid errors.</span>
+        <span class="s8">await </span><span class="s8">this</span><span class="s2">.</span><span class="s5">doWork</span>(<span class="s9">'doing backend'</span><span class="s2">, </span><span class="s8">new </span><span class="s2">Error(</span><span class="s9">'the deploy failed'</span><span class="s2">));
+      }
+
+      </span><span class="s8">async</span><span class="s5"> doFrontEnd</span><span class="s2">() {</span>
+        <span class="s8">await </span><span class="s8">this</span><span class="s2">.</span><span class="s5">doWork</span>(<span class="s9">'doing frontend'</span><span class="s2"><span class="s2">);
+      }
+
+      </span><span class="s8">async</span><span class="s5"> visitEnglishClasses</span><span class="s2">() {</span>
+        <span class="s8">await </span><span class="s8">this</span><span class="s2">.</span><span class="s5">walkUpright</span>(</span><span class="s9">'on the way to English classes'</span><span class="s2">);
+        </span><span class="s8">this</span><span class="s2">.</span><span class="s5">is</span>(</span><span class="s9">'learning English'</span><span class="s2">);
+      }
+    };
+
+    </span><span class="s8">const </span><span class="s2">sirko = </span><span class="s8">new </span><span class="s2">HomoSapiens(</span><span class="s9">'Roman Liashenko'</span><span class="s2">, </span><span class="s9">'June 20, 1986'</span><span class="s2">, </span><span class="s9">'male'</span><span class="s2">);
+    </span><span class="s8">const </span><span class="s2">BR0kEN = </span><span class="s8">new </span><span class="s2">HomoSapiens(</span><span class="s9">'Sergii Bondarenko'</span><span class="s2">, </span><span class="s9">'September 6, 1991'</span><span class="s2">, </span><span class="s9">'male'</span><span class="s2">);
+    </span><span class="s8">const </span><span class="s2">axicdv = </span><span class="s8">new </span><span class="s2">HomoSapiens(</span><span class="s9">'Dmytro Palamarchuk'</span><span class="s2">, </span><span class="s9">'October 28, 1983'</span><span class="s2">, </span><span class="s9">'male'</span><span class="s2">);
+    </span><span class="s8">const </span><span class="s2">lokeoke = </span><span class="s8">new </span><span class="s2">HomoSapiens(</span><span class="s9">'Mykhailo Sokolovskyi'</span><span class="s2">, </span><span class="s9">'February 9, 1993'</span><span class="s2">, </span><span class="s9">'male'</span><span class="s2">);
+    </span><span class="s8">const </span><span class="s2">Iliya889 = </span><span class="s8">new </span><span class="s2">HomoSapiens(</span><span class="s9">'Iliya Kulishova'</span><span class="s2">, </span><span class="s9">'April 28, 1988'</span><span class="s2">, </span><span class="s9">'female'</span><span class="s2">);
+    </span><span class="s8">const </span><span class="s2">soovorov = </span><span class="s8">new </span><span class="s2">HomoSapiens(</span><span class="s9">'Alexander Mikhutkin'</span><span class="s2">, </span><span class="s9">'February 11, 1987'</span><span class="s2">, </span><span class="s9">'male'</span><span class="s2">);
+    </span><span class="s8">const </span><span class="s2">jplotnikov = </span><span class="s8">new </span><span class="s2">HomoSapiens(</span><span class="s9">'Yevhen Plotnikov'</span><span class="s2">, </span><span class="s9">'February 9, 1985'</span><span class="s2">, </span><span class="s9">'male'</span><span class="s2">);
+
+    (<span class="s8">async</span> <span class="s6">today</span> =&gt; {
+      <span class="s8">await </span>stallion.<span class="s5">wakeUp</span>();
+      <span class="s8">await </span>stallion.<span class="s5">goToWork</span>();
+
+      </span><span class="s8">if </span><span class="s2">(stallion.<span class="s5">isBirthday</span>(<span class="s6">today</span>)) {
+        stallion.<span class="s5">celebrateBirthday</span>(
+          [lokeoke, axicdv, BR0kEN, jplotnikov, sirko, Iliya889],
+          [</span><span class="s9">'the best wishes'</span><span class="s2">, </span><span class="s9">'Apple Airpods'</span><span class="s2">, </span><span class="s9">'щястя-здаровя'</span><span class="s2">]
+        );
+      }
+
+      </span><span class="s8">try </span><span class="s2">{
+        <span class="s8">await </span>stallion.<span class="s5">doFrontEnd</span>();
+      }
+      </span><span class="s8">catch </span><span class="s2">(<span class="s6">frontendIssue</span>) {
+        <span class="s8">await </span>stallion.<span class="s5">requestHelp</span>(<span class="s6">frontendIssue</span>, soovorov, sirko);
+        <span class="s8">await </span>stallion.<span class="s5">doFrontEnd</span>();
+      }
+
+      </span><span class="s8">try </span><span class="s2">{
+        <span class="s8">await </span>stallion.<span class="s5">doBackEnd</span>();
+      }
+      </span><span class="s8">catch </span><span class="s2">(<span class="s6">backendIssue</span>) {
+        <span class="s8">await </span>stallion.<span class="s5">requestHelp</span>(<span class="s6">backendIssue</span>, lokeoke, BR0kEN);
+        <span class="s8">await </span>stallion.<span class="s5">doBackEnd</span>();
+      }
+
+      <span class="s8">await </span>stallion.<span class="s5">getFood</span>();
+
+      </span><span class="s8">if </span><span class="s2">([</span><span class="s9">'Monday'</span><span class="s2">, </span><span class="s9">'Wednesday'</span><span class="s2">].<span class="s5">includes</span>(<span class="s6">today</span>.<span class="s5">toLocaleDateString</span>(document.documentElement.lang, {<span class="s5">weekday</span>: </span><span class="s9">'long'</span><span class="s2">}))) {
+        <span class="s8">await </span>stallion.<span class="s5">visitEnglishClasses</span>();
+      }
+
+      <span class="s8">await </span>stallion.<span class="s5">goHome</span>();
+      <span class="s8">await </span>stallion.<span class="s5">goSleep</span>();
+    })(</span><span class="s8">new </span><span class="s2">Date);
+  </span><span class="s0">&lt;/script&gt;</span><span class="s2">
+</span><span class="s0">&lt;/body&gt;</span><span class="s2">
+</span><span class="s0">&lt;/html&gt;</span><span class="s2">
+</span></pre>
+</body>
+</html>
